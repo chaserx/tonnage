@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+positive_lbs:
+  unit: lbs
+  value: 1.5
+
+# negative_lbs:
+#   unit: lbs
+#   value: -1.5
+
+positive_kg:
+  unit: kg
+  value: 10.0
+
+# negative_kg:
+#   unit: kg
+#   value: -10.0

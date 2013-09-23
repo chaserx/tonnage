@@ -1,4 +1,6 @@
 Tonnage::Application.routes.draw do
+  resources :weight_measurements
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
