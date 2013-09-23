@@ -1,10 +1,13 @@
 Tonnage::Application.routes.draw do
+  get "home/index"
   resources :weight_measurements
 
   scope :api do
     get "/weight_measurements(.:format)" => "weight_measurements#index"
     get "/weight_measurements/:id(.:format)" => "weight_measurements#show"
   end
+
+  root to: "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

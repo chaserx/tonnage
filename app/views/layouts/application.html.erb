@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Tonnage">
 <head>
   <title>Tonnage</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    Tonnage
+  </header>
 
-<%= yield %>
+  <%= yield %>
 
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js"></script>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
 </html>
