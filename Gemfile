@@ -34,6 +34,9 @@ end
 
 gem 'thin'
 
+gem 'multi_json'
+gem 'oj'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
