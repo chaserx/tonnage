@@ -1,9 +1,9 @@
 class WeightMeasurementsController < ApplicationController
   def index
-    render json: WeightMeasurements.all
+    render json: WeightMeasurement.all
   end
 
   def show
-    render json: WeightMeasurements.find(params[:id])
+    render json: WeightMeasurement.find(params[:id])
   end
 end
