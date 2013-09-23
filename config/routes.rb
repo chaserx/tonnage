@@ -1,6 +1,11 @@
 Tonnage::Application.routes.draw do
   resources :weight_measurements
 
+  scope :api do
+    get "/weight_measurements(.:format)" => "weight_measurements#index"
+    get "/weight_measurements/:id(.:format)" => "weight_measurements#show"
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -41,7 +46,7 @@ Tonnage::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
