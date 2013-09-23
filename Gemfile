@@ -32,7 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'thin'
+gem 'puma'
 
 gem 'multi_json'
 gem 'oj'
