@@ -1,9 +1,29 @@
 class WeightMeasurementsController < ApplicationController
+  respond_to :json
+
   def index
-    render json: WeightMeasurement.all
+    respond_with WeightMeasurement.all
   end
 
   def show
-    render json: WeightMeasurement.find(params[:id])
+    respond_with WeightMeasurement.find(params[:id])
+  end
+
+  def create
+    respond_with Entry.create(measurement_params)
+  end
+
+  def update
+    respond_with Entry.update(params[:id], params[:entry])
+  end
+
+  def destroy
+    respond_with Entry.destroy(params[:id])
+  end
+
+  private
+
+  def measurement_params
+    params.require(:weight_measurement).permit(:value)
   end
 end

@@ -3,8 +3,9 @@ Tonnage::Application.routes.draw do
   resources :weight_measurements
 
   scope :api do
-    get "/weight_measurements(.:format)" => "weight_measurements#index"
-    get "/weight_measurements/:id(.:format)" => "weight_measurements#show"
+    # get "/weight_measurements(.:format)" => "weight_measurements#index"
+    # get "/weight_measurements/:id(.:format)" => "weight_measurements#show"
+    resources :weight_measurements
   end
 
   root to: "home#index"

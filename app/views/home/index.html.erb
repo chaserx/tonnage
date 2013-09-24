@@ -1,4 +1,18 @@
 <div ng-controller="WeightMeasurementsCtrl">
   <h1>Message: {{message}}</h1>
+
+  <form ng-submit="addWeightMeasurement()">
+    <input type="text" ng-model="newWeightMeasurement.value">
+    <input type="submit" value="Add">
+  </form>
+
+  <div>
+    <ul>
+      <li ng-repeat="weight_measurement in weight_measurements">
+        {{weight_measurement.value}}
+      </li>
+    </ul>
+  </div>
+
 </div>
 
