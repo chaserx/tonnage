@@ -1,18 +1,32 @@
 <div ng-controller="WeightMeasurementsCtrl">
-  <h1>Message: {{message}}</h1>
-
-  <form ng-submit="addWeightMeasurement()">
-    <input type="text" ng-model="newWeightMeasurement.value">
-    <input type="submit" value="Add">
-  </form>
-
-  <div>
-    <ul>
-      <li ng-repeat="weight_measurement in weight_measurements">
-        {{weight_measurement.value}}
-      </li>
-    </ul>
+  <div class="row">
+    <div class="col-md-6 col-xs-6 col-sm-6">
+      <h1>{{message}}</h1>
+    </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-6 col-xs-6 col-sm-6">
+      <form ng-submit="addWeightMeasurement()" class="form-inline" role="form">
+        <div class="form-group">
+          <input type="text" ng-model="newWeightMeasurement.value" class="form-control" placeholder="Enter current lbs">
+        </div>
+        <button type="submit" value="Add" class="btn btn-default">Add</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="col-md-6 col-xs-6 col-sm-6">
+      <table class='table table-striped table-bordered'>
+        <th>Weight (lbs)</th>
+        <th>DateTime</th>
+        <tr ng-repeat="weight_measurement in weight_measurements">
+          <td>{{weight_measurement.value}}</td>
+          <td>{{weight_measurement.created_at}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>
 

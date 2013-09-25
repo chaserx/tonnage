@@ -1,5 +1,5 @@
 App.controller 'WeightMeasurementsCtrl', ['$scope', "WeightMeasurement", ($scope, WeightMeasurement) ->
-  $scope.message = "Hey there, slim!"
+  $scope.message = "Hey there, slim! Weigh in."
   $scope.weight_measurements = WeightMeasurement.query()
 
   $scope.addWeightMeasurement = ->
