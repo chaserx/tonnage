@@ -2,7 +2,7 @@ class WeightMeasurementsController < ApplicationController
   respond_to :json
 
   def index
-    respond_with WeightMeasurement.all
+    respond_with WeightMeasurement.all.order(:created_at)
   end
 
   def show
